@@ -1,0 +1,6 @@
+applications:
+- name: hm-komninos-cnj
+  path: target/cnj-backend-0.0.1-SNAPSHOT.jar
+  instances: 1
+  memory: 800M
+  

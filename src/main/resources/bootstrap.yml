@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: hm-komninos-cnj
+---
+spring:
+  profiles: dev, cloud
+  cloud:
+    config:
+      uri: https://hm-komninos-cnj-config-server.cfapps.io
