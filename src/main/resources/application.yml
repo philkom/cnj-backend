@@ -1,5 +1,9 @@
 server:
   port: 8000
+spring:
+  h2:
+    console:
+      enabled: true
 cnj:
   info:
     message: Server verwendet Konfiguration aus Codebase!
