@@ -25,7 +25,7 @@ public class InfoControllerIntegrationTest {
 	@Test
 	public void testInfoMessage() {
 		given(this.infoProperties.getMessage()).willReturn(message);
-		Info info = serviceUnderTest.greeting();
+		Info info = serviceUnderTest.getInfo();
 		assertThat(info.getMessage()).isEqualTo(message);
 	}
 }

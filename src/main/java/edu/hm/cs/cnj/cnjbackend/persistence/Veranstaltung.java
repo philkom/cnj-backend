@@ -1,5 +1,7 @@
 package edu.hm.cs.cnj.cnjbackend.persistence;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -56,11 +58,39 @@ public class Veranstaltung {
 		teilnahme.setVeranstaltung(this);
 	}
 
+	public Date getBeginn() {
+		return beginn;
+	}
+
+	public String getBeschreibung() {		
+		return beschreibung;
+	}
+
 	public Long getId() {
 		return id;
 	}
 
-	public Set<Teilnahme> getEinladungen() {
-		return einladungen;
+	public Collection<Teilnahme> getTeilnahmen() {
+		return Collections.unmodifiableCollection(einladungen);
+	}
+
+	public String getTitel() {		
+		return titel;
+	}
+
+	public void setBeginn(Date beginn) {
+		this.beginn = beginn;		
+	}
+
+	public void setBeschreibung(String beschreibung) {
+		this.beschreibung = beschreibung;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public void setTitel(String titel) {
+		this.titel = titel;
 	}
 }
